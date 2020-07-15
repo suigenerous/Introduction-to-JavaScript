@@ -228,11 +228,12 @@ function isVowel(letter){
     }
 }
 
+
 function vowelCounter(str){
     let vowelNumber = 0;
-    for (i=0; i < str.length; i++){
-        if (str.charAt(i).isVowel === true){
-            vowelNumber = vowelNumber + 1;
+    for (var i=0; i < str.length; i++){
+        if (isVowel(str.charAt(i))){
+            vowelNumber++;
         }
         else{
             continue;
