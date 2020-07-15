@@ -103,10 +103,54 @@ function dogFeeder(age, weight){
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
 function rps(humanChoice){
-    let computerChoice = -1;
-    randomInt = Math.floor(Math.random() * Math.floor(3))
-    
 
+    let computerChoice = "";
+    randomInt = Math.floor(Math.random() * Math.floor(3))
+    if (randomInt === 0){
+        computerChoice = "rock";
+    }
+    else if (randomInt === 1){
+        computerChoice = "paper";
+    }
+    else {
+        computerChoice = "scissors";
+    }
+
+    console.log("Computer chose: " + computerChoice);
+
+    if (humanChoice === "rock"){
+        if (computerChoice === "rock"){
+            return "tie";
+        }
+        else if (computerChoice === "paper"){
+            return "loss";
+        }
+        else{
+            return "win";
+        }
+    }
+    else if (humanChoice === "paper"){
+        if (computerChoice === "rock"){
+            return "win";
+        }
+        else if (computerChoice === "paper"){
+            return "tie";
+        }
+        else{
+            return "loss";
+        }
+    }
+    else {
+        if (computerChoice === "rock"){
+            return "loss";
+        }
+        else if (computerChoice === "paper"){
+            return "win";
+        }
+        else{
+            return "tie";
+        }
+    }
 }  
   
 
@@ -114,13 +158,17 @@ function rps(humanChoice){
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+function kmToMiles(km){
+    return km*1.6;
+}
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+function feetToCm (feet){
+    return feet*30.48;
+}
 
 
 
@@ -129,7 +177,11 @@ function rps(humanChoice){
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+function annoyingSong(start){
+    for (i=start; i > 0; i--){
+        console.log(i + " bottles of beer on the wall, " + i, " bottles of beer, take one down pass it around " + (i-1) + " bottles of beer on the wall");
+    }
+}
 
 
 
@@ -142,7 +194,23 @@ function rps(humanChoice){
 //60s should be D 
 //and anything below 60 should be F
   
-
+function grader(score){
+    if (score>=90){
+        return "A";
+    }
+    else if (score>=80){
+        return "B";
+    }
+    else if (score>=70){
+        return "C";
+    }
+    else if (score>=60){
+        return "D";
+    }
+    else {
+        return "F"
+    }
+}
   
   
 
@@ -151,7 +219,28 @@ function rps(humanChoice){
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+function isVowel(letter){
+    if(letter == "A" || letter == "E" || letter == "I" || letter == "O" || letter == "U" || letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
+function vowelCounter(str){
+    let vowelNumber = 0;
+    for (i=0; i < str.length; i++){
+        if (str.charAt(i).isVowel === true){
+            vowelNumber = vowelNumber + 1;
+        }
+        else{
+            continue;
+        }
+    }
+    return vowelNumber;
+
+}
 
 
 
