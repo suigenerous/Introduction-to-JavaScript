@@ -1,35 +1,35 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-// let votingAge = 20;
-// if (votingAge > 18){
-//     return true;
-// }
+let votingAge = 20;
+if (votingAge > 18){
+    console.log(true);
+}
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-// let x = null;
-// let y = null;
+let x = 2;
+let y = 0;
 
-// if (x != null){
-//     y = 1;
-// }
+if (x != null){
+    y = 1;
+}
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-// Number("1999");
+let conversion = Number("1999");
 
 
 
 //Task d: Write a function to multiply a*b 
 
-// function multiply(a,b){
-//     return a*b;
-// }
+function multiply(a,b){
+    return a*b;
+}
 
 
 
@@ -37,9 +37,9 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-// function dogYears(age){
-//     return age*7;
-// }
+function dogYears(age){
+    return age*7;
+}
 
 
 
@@ -61,36 +61,36 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
-// function dogFeeder(age, weight){
-//     if ($age<0||$age<(2/12)){
-//         return null;
-//     }
-//     else if($age>1){
-//         if ($weight<5){
-//             return $weight*.05;
-//         }
-//         else if (6<$weight<10){
-//             return $weight*.04;
-//         }
-//         else if (11<$weight<15){
-//             return $weight*.03;
-//         }
-//         else{
-//             return $weight*.02;
-//         }
-//     }
-//     else{
-//         if((2/12)<$age<(4/12)){
-//             return $weight*.1;
-//         }
-//         else if((4/12)<$age<(7/12)){
-//             return $weight*.05;
-//         }
-//         else{
-//             return $weight*.04;
-//         }
-//     }
-// }
+function dogFeeder(age, weight){
+    if (age<0||age<(2/12)){
+        return 0;
+    }
+    else if(age>=1){
+        if (5>=weight){
+            return weight*.05;
+        }
+        else if (6<weight && weight<=10){
+            return weight*.04;
+        }
+        else if (11<weight && weight<=15){
+            return weight*.03;
+        }
+        else{
+            return weight*.02;
+        }
+    }
+    else{
+        if((2/12)<age && age<(4/12)){
+            return weight*.1;
+        }
+        else if((4/12)<age && age<(7/12)){
+            return weight*.05;
+        }
+        else{
+            return weight*.04;
+        }
+    }
+}
 
 
 
@@ -102,7 +102,12 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+function rps(humanChoice){
+    let computerChoice = -1;
+    randomInt = Math.floor(Math.random() * Math.floor(3))
+    
+
+}  
   
 
 /************************************************************** Task 5 **************************************************************/
